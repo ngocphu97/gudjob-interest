@@ -1,0 +1,12 @@
+<div mat-menu-item class="menu-item">
+
+  <div class="menu-title">
+    <mat-chip-list>
+      <mat-chip selected [color]="annouce.status === 'new' ? 'primary' : 'accent'">
+        <span class="annouce-status">{{annouce.status}}</span>
+      </mat-chip>
+    </mat-chip-list>
+    <p class="title">{{annouce.title}}</p>
+  </div>
+
+</div>

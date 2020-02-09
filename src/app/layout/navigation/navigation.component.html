@@ -1,0 +1,43 @@
+<mat-toolbar>
+
+  <mat-toolbar-row>
+    <span>Buy me coffee</span>
+
+    <div class="themes-menu">
+      <button mat-button [matMenuTriggerFor]="appMenu">
+          Themes
+        </button>
+        
+        <mat-menu #appMenu="matMenu">
+          <button mat-menu-item (click)="lightTheme()">Light</button>
+          <button mat-menu-item (click)="darkTheme()">Dark</button>
+        </mat-menu>
+      </div>
+
+
+    <span class="spacer"></span>
+
+    <span class="icon">Your page</span>
+
+    <button class="icon" mat-icon-button color="primary">
+      <mat-icon>local_pizza</mat-icon>
+    </button>
+
+    <button class="icon" [matMenuTriggerFor]="menu" mat-icon-button color="primary">
+      <mat-icon>dynamic_feed</mat-icon>
+    </button>
+    
+
+    <mat-menu #menu="matMenu" class="menu">
+
+      <!-- TODO: Custom mat menu item -->
+      <ng-container *ngFor="let annouce of annoucments">
+        <app-menu-item [annouce]="annouce"></app-menu-item>
+      </ng-container>
+
+    </mat-menu>
+
+
+  </mat-toolbar-row>
+
+</mat-toolbar>

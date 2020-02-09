@@ -1,0 +1,55 @@
+.analytic {
+  display: flex;
+  justify-content: space-between;
+
+  .card {
+    width: 30%;
+    height: 400px;
+    padding-top: 0;
+    padding-bottom: 27px;
+
+    .card-header {
+      width: 100%;
+
+      .card-title {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: baseline;
+      }
+
+    }
+
+    .card-content {
+      width: 100%;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+
+      .number {
+        font-size: 87px;
+        margin: 0;
+        margin-left: 5px;
+      }
+
+      .icon {
+        font-size: 32px;
+        margin: 0;
+        margin-right: 5px;
+        margin-top: -25px;
+      }
+
+    }
+
+    .total {
+      text-align: center;
+      margin-top: 0;
+    }
+  }
+}
+
+
+:host::ng-deep.mat-card-header-text {
+  width: 100% !important;
+}

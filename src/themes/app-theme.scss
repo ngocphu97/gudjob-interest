@@ -1,0 +1,16 @@
+@import '~@angular/material/theming';
+@import './light';
+@import './dark';
+
+@include mat-core();
+
+// Apply the default theme styles.
+@include angular-material-theme($candy-app-theme);
+
+.unicorn-dark-theme {
+  @include angular-material-theme($dark-theme);
+}
+
+.unicorn-light-theme {
+  @include angular-material-theme($candy-app-theme);
+}

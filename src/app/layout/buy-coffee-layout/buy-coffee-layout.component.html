@@ -1,0 +1,32 @@
+<div>
+  <app-navigation></app-navigation>
+</div>
+
+<mat-drawer-container class="drawer-container">
+
+  <mat-drawer mode="side" opened class="drawer">
+
+    <mat-list>
+
+      <a mat-list-item *ngFor="let navigate of navigates" 
+          class="list-item" 
+          routerLink="{{navigate.router}}" 
+          routerLinkActive="router-link-active" >
+
+        <mat-icon matListIcon> {{navigate.icon}} </mat-icon>
+
+        <h3 matLine class="navigate-title"> {{navigate.title}} </h3>
+
+      </a>
+
+    </mat-list>
+
+  </mat-drawer>
+
+  <mat-drawer-content class="drawer-content">
+
+    <router-outlet></router-outlet>
+
+  </mat-drawer-content>
+
+</mat-drawer-container>

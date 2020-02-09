@@ -1,0 +1,29 @@
+@import '~@angular/material/theming';
+
+$primary: mat-color(mat-palette($mat-purple));
+
+.menu-item {
+  height: 100px;
+  padding-top: 15px;
+  border-top: 1px solid $primary;
+
+  .menu-title {
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      white-space: pre-wrap;
+      line-height: 24px;
+      padding-left: 10px;
+      margin-bottom: 0;
+    }
+
+    .annouce-status {
+      text-transform: uppercase;
+    }
+  }
+
+  .content {
+    margin-top: 0;
+  }
+}
